@@ -1,9 +1,28 @@
+-- Set <space> as leader key
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
+
 require("config.lazy")
 
 -- neovim
+vim.o.relativenumber = true
 vim.opt.expandtab = true
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
+
+vim.o.mouse = 'a' -- enable mouse support
+
+vim.o.breakindent = true -- enable break indent
+
+vim.o.list = true
+vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+
+-- disable netrw at the very start of your init.lua
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+-- optionally enable 24-bit colour
+vim.opt.termguicolors = true
 
 -- key bindings
 -- diagnostics
