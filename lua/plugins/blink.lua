@@ -1,5 +1,4 @@
 return {
-
 	{
 		"saghen/blink.cmp",
 		dependencies = { "rafamadriz/friendly-snippets", "fang2hou/blink-copilot" },
@@ -12,10 +11,16 @@ return {
 			sources = {
 				default = { "snippets", "lsp", "copilot", "path", "buffer" },
 				providers = {
+					snippets = {
+						score_offset = 5,
+					},
+					lsp = {
+						score_offset = 4,
+					},
 					copilot = {
 						name = "copilot",
 						module = "blink-copilot",
-						score_offset = 100,
+						score_offset = 3,
 						async = true,
 					},
 				},
