@@ -7,7 +7,7 @@ return {
 		---@module 'blink.cmp'
 		---@type blink.cmp.Config
 		opts = {
-			keymap = { preset = "enter" },
+			keymap = { preset = "default" },
 			sources = {
 				default = { "snippets", "lsp", "copilot", "path", "buffer" },
 				providers = {
@@ -20,7 +20,7 @@ return {
 					copilot = {
 						name = "copilot",
 						module = "blink-copilot",
-						score_offset = 3,
+						score_offset = 1000,
 						async = true,
 					},
 				},
