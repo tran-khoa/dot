@@ -1,0 +1,12 @@
+# Define the tags file name and the sources
+TAGS_FILE = tags
+PYTHON_SOURCES = $(shell find . -name "*.py")
+
+.PHONY: tags clean
+
+# The 'tags' target creates the tags file
+tags:
+	ctags --languages=python --python-kinds=cmf -R $(PYTHON_SOURCES)
+# The 'clean' target removes the tags file
+clean:
+	rm -f $(TAGS_FILE)
