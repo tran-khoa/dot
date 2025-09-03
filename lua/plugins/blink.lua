@@ -3,11 +3,8 @@ return {
 		"saghen/blink.cmp",
 		dependencies = { "rafamadriz/friendly-snippets", "fang2hou/blink-copilot" },
 		version = "1.*",
-
-		---@module 'blink.cmp'
-		---@type blink.cmp.Config
 		opts = {
-			keymap = { preset = "default" },
+			keymap = { preset = "enter" },
 			sources = {
 				default = { "snippets", "lsp", "copilot", "path", "buffer" },
 				providers = {
@@ -26,20 +23,26 @@ return {
 				},
 			},
 			completion = {
-				enabled = true,
 				ghost_text = {
 					enabled = true,
 				},
 				documentation = {
-					enabled = true,
 					auto_show = true,
+				},
+				list = {
+					selection = {
+						preselect = false,
+					},
 				},
 			},
 			signature = {
 				enabled = true,
-				auto_trigger = true,
-				max_lines = 5,
-				max_height = 10,
+				trigger = {
+					enabled = true,
+				},
+				window = {
+					max_height = 10,
+				},
 			},
 		},
 		opts_extend = { "sources.default" },
